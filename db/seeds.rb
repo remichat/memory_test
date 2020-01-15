@@ -12,7 +12,8 @@ revenues = CSV.foreach(filepath, csv_options).map do |row|
     product_code: row[4],
     product_description: row[5],
     quantity: row[6],
-    unit_price: row[7]
+    unit_price: row[7],
+    revenue: row[6].to_i * row[7].to_f
   }
 end
 

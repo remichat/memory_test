@@ -1,6 +1,12 @@
 <div class="container">
     <div class="select-country">
-      <p>Select a country here </p>
+      <h6>Country </h6>
+      <select class="select2" name="country" id="select">
+        <option <%= "selected='selected'" if @selected_country == 'all' %>value="all">All</option>
+        <% @countries.each do |country| %>
+          <option <%= "selected='selected'" if @selected_country == country.downcase %>value="<%= URI::encode(country.downcase) %>"><%= country %></option>
+        <% end %>
+      </select>
     </div>
     <div class="summary">
       <h3>Summary</h3>

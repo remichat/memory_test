@@ -1,11 +1,13 @@
 class CountryRevenuesController < ApplicationController
   def show
-    @countries = Revenue.select(:country).distinct.map(&:country)
+    @countries = Revenue.select(:country).distinct.map(&:country).sort
 
     if params[:country].present? && @countries.map(&:downcase).include?(params[:country])
-      country_revenues = Revenue.where('LOWER(country) = ? AND quantity > 0', params[:country])
+      @selected_country = params[:country]
+      country_revenues = Revenue.where('LOWER(country) = ? AND quantity > 0', @selected_country)
     else
       country_revenues = Revenue.where('quantity > 0')
+      @selected_country = all
     end
 
     # @total_revenue = country_revenues.reduce(0) {|memo, revenue| memo + revenue.revenue }.round

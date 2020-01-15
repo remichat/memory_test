@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2020-01-15 10:12:11
+  order_id: MyString
+  customer_id: MyString
+  country: MyString
+  product_code: MyString
+  product_description: MyString
+  quantity: MyString
+  unit_price: MyString
+
+two:
+  date: 2020-01-15 10:12:11
+  order_id: MyString
+  customer_id: MyString
+  country: MyString
+  product_code: MyString
+  product_description: MyString
+  quantity: MyString
+  unit_price: MyString

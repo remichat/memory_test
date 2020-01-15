@@ -1,5 +1,8 @@
 {
   "name": "memory_test",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "webpack": "^4.41.5"
+  }
 }

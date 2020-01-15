@@ -1,5 +1,26 @@
-<h2>Hello</h2>
-<%= @total_revenue %> total revenue
+<div class="container">
+    <div class="select-country">
+      <p>Select a country here </p>
+    </div>
+    <div class="summary">
+      <h3>Summary</h3>
+      <div class="grid">
+        <div class="card-info">
+          <h4>Revenue</h4>
+          <h4><%= number_to_human(@total_revenue) %>€</h4>
+        </div>
+        <div class="card-info">
+          <h4>Avg revenue / order</h4>
+          <h4><%= number_to_human(@avg_revenue_per_order) %>€</h4>
+        </div>
+        <div class="card-info">
+          <h4>Customers</h4>
+          <h4><%= number_to_human(@nb_customers) %></h4>
+        </div>
+      </div>
+    </div>
+    <div class="chart">
+      <h3>Revenue per month</h3>
 
-
-<%= @avg_revenue_per_order %> avg revenue
+    </div>
+</div>

@@ -1,3 +1,19 @@
-// Place all the styles related to the country_revenues controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap/scss/bootstrap";
+
+@import "components/card-info";
+
+body {
+  background-color: rgb(240, 240, 240);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.summary,
+.chart {
+  margin-top: 30px;
+}
+
